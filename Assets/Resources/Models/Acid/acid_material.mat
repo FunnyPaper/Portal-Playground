@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: acid_material
+  m_Shader: {fileID: -6465566751694194690, guid: 959e222f4effc2c4a9ca08f765b6039c,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Triplanar_14978D5C_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 430a49a5812ed5b4993cf5e5559dfa90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_BAC8A2F8_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 430a49a5812ed5b4993cf5e5559dfa90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_3D6FCE3C: 1
+    - Vector1_75419CAB: 10
+    - Vector1_BE014E4F: 0.4
+    - Vector1_FA2E0EB3: 0.7
+    m_Colors:
+    - Color_A2F656BB: {r: 0.3105724, g: 3.1846044, b: 4.237095, a: 1}
+    - Vector2_5B9E755B: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_C172299B: {r: 20, g: 20, b: 0, a: 0}
