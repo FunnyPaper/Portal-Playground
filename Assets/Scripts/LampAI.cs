@@ -4,22 +4,15 @@ using GlobalUtility.InheritBehaviour;
 [RequireComponent(typeof(Rigidbody))]
 public sealed class LampAI : Entity
 {
-    [SerializeField]
-    AudioClip _breakSound;    
-    
-    [SerializeField]
-    AudioClip _buzzSound;
-    
-    [SerializeField]
-    float _breakForce = 5;
+    [SerializeField] AudioClip _breakSound = null;        
+    [SerializeField] AudioClip _buzzSound = null;    
+    [SerializeField] float _breakForce = 5;
 
-    [SerializeField]
     [Range(0, 1)]
-    float _buzzSoundVolume = 0.1f;
+    [SerializeField] float _buzzSoundVolume = 0.1f;
 
-    [SerializeField]
     [Range(0, 1)]
-    float _breakSoundVolume = 0.1f;
+    [SerializeField] float _breakSoundVolume = 0.1f;
 
     AudioSource _aSource;
     Rigidbody _rBody;

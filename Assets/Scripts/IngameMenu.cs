@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class IngameMenu : MonoBehaviour
 {
-    public GameObject Menu;
-    public GameObject Main;
-    public GameObject Options;
+    [SerializeField] GameObject Menu = null;
+    [SerializeField] GameObject Main = null;
+    [SerializeField] GameObject Options = null;
 
     void Start()
     {
@@ -66,7 +64,6 @@ public class IngameMenu : MonoBehaviour
     public void SetVolume(Slider slider)
     {
         AudioListener.volume = slider.value;
-        Globals.volume = slider.value;
     }
 
 }

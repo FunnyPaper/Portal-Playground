@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public LineRenderer lr;
+    [SerializeField] LineRenderer lr = null;
 
     void Start()
     {

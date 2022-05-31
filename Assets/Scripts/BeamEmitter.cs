@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using GlobalUtility.InheritBehaviour;
@@ -10,14 +9,9 @@ public class BeamEmitter : ContinousMechanism
 {
     LineRenderer lr;
     
-    [SerializeField]
-    Transform StartingPoint;
-
-    [SerializeField]
-    GameObject CollidingPoint;
-
-    [SerializeField]
-    float distance = 2000;
+    [SerializeField] Transform StartingPoint = null;
+    [SerializeField] GameObject CollidingPoint = null;
+    [SerializeField] float distance = 2000;
 
     public bool IsActiveIns { get; set; } = false;
 

@@ -3,14 +3,12 @@
 [RequireComponent(typeof(Rigidbody))]
 public class Grippable : MonoBehaviour
 {
-    public bool isGrabbed = false;
-    public GameObject Hand;
+    [SerializeField] bool isGrabbed = false;
+    [SerializeField] GameObject Hand = null;
+    [SerializeField] AudioClip _groundHitSound = null;
+
     Rigidbody body;
-
     AudioSource _aSource;
-
-    [SerializeField]
-    AudioClip _groundHitSound;
 
     float initialMass;
     float initialDrag;

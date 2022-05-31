@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GlobalUtility;
 
 public class PannelButton : ButtonSignal, Useable
 {
-    [SerializeField]
-    char Symbol = '1';
+    [SerializeField] char Symbol = '1';
 
     public bool settable = true;
 
@@ -17,7 +14,6 @@ public class PannelButton : ButtonSignal, Useable
     protected override void Start()
     {
         base.Start();
-        //_audioSource.clip = Resources.Load<AudioClip>(@"Sounds/button_press");
     }
 
     public void Use()

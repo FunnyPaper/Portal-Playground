@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using GlobalUtility.Logic;
@@ -13,12 +12,10 @@ public class ExecursionFunnelField : ContinousMechanism
     BoxCollider bc;
 
     public bool IsActiveIns { get; set; } = false;
-    public float force = 1;
 
-    private float _lastDistance = 0;
-
-    [SerializeField]
-    int _fieldFaces = 16;
+    [SerializeField] float force = 1;
+    [SerializeField] int _fieldFaces = 16;
+    float _lastDistance = 0;
 
     private void Awake()
     {

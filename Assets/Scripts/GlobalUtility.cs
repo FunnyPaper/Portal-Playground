@@ -90,8 +90,7 @@ namespace GlobalUtility
 
         public abstract class ContinousMechanism : Mechanism
         {
-            [SerializeField]
-            protected bool _activeRegardlessSignal = false;
+            [SerializeField] protected bool _activeRegardlessSignal = false;
         }
 
         [RequireComponent(typeof(Animator), typeof(AudioSource))]

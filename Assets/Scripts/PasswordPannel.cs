@@ -5,15 +5,9 @@ using GlobalUtility.InheritBehaviour;
 
 public class PasswordPannel : Signal
 {
-    [SerializeField]
-    char[] entry;
-
-    [SerializeField]
-    string password = "1111";
-
-    [SerializeField]
-    List<PannelButton> _buttons = new List<PannelButton>();
-
+    [SerializeField] char[] entry;
+    [SerializeField] string password = "1111";
+    [SerializeField] List<PannelButton> _buttons = new List<PannelButton>();
     PannelButton[] _clicked;
 
     bool settable = true;

@@ -214,7 +214,7 @@ MonoBehaviour:
   isGrabbed: 0
   Hand: {fileID: 0}
   _groundHitSound: {fileID: 0}
-  HandOffset: {x: 0, y: -1, z: 0}
+  HandOffset: {x: 0, y: -0.5, z: 0}
 --- !u!82 &5069307209138336925
 AudioSource:
   m_ObjectHideFlags: 0

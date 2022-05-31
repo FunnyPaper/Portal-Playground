@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 
 public class ButtonBig : ButtonSignal
@@ -13,7 +11,7 @@ public class ButtonBig : ButtonSignal
 
     private void OnTriggerEnter(Collider other)
     {
-        // Zdefiniowac tag system
+        // Zdefiniowac tag system ?
         if (!other.GetComponent<Entity>())
             return;
 
@@ -27,7 +25,7 @@ public class ButtonBig : ButtonSignal
 
     private void OnTriggerExit(Collider other)
     {
-        // Zdefiniowac tag system
+        // Zdefiniowac tag system ?
         if (!other.GetComponent<Entity>())
             return;
 

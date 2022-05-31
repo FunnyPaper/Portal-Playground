@@ -11,40 +11,33 @@ public class PlayerAI : AIEntity
     float rotX;
     float rotY;
 
-    public float mouseSensitivity = 100.0f;
-    public float clampAngle = 80.0f;
-    public int jumpFactor = 4;
-    public float speed = 3.2f;
-    [HideInInspector] public Vector3 movement;
+    [SerializeField] float mouseSensitivity = 100.0f;
+    [SerializeField] float clampAngle = 80.0f;
+    [SerializeField] int jumpFactor = 4;
+    [SerializeField] float speed = 3.2f;
     public CharacterController ctrl;
 
+    [HideInInspector] public Vector3 movement;
     [HideInInspector] public bool Flying = false;
 
     float ActionDistance = 3.0f;
-    public GameObject hand;
-    public GameObject grabbedObject;
+    [SerializeField] GameObject hand = null;
+    [SerializeField] GameObject grabbedObject = null;
+    [SerializeField] Image Fader = null;
+    [SerializeField] float _maxHealth = 200.0f;
 
-    public Image Fader;
+    bool isAttacked = false;
+    bool isRegenerating = false;
 
-    [SerializeField]
-    float _maxHealth = 200.0f;
-
-    private bool isAttacked = false;
-    private bool isRegenerating = false;
-
-    [SerializeField]
-    float _regenAmountPerSec = 5;
-
-    [SerializeField]
-    Camera PlayerCamera;
+    [SerializeField] float _regenAmountPerSec = 5;
+    [SerializeField] Camera PlayerCamera = null;
 
     AudioSource aSource;
     Vector3 old_position;
-    public float step_size = 1.2f;
-    public List<AudioClip> stepAudioClipList = new List<AudioClip>();
-    public List<AudioClip> jumpAudioClipList = new List<AudioClip>();
-
-    public AudioSource jump_aSource;
+    [SerializeField] float step_size = 1.2f;
+    [SerializeField] List<AudioClip> stepAudioClipList = new List<AudioClip>();
+    [SerializeField] List<AudioClip> jumpAudioClipList = new List<AudioClip>();
+    [SerializeField] AudioSource jump_aSource = null;
     float oldHeight = 0.0f;
 
     protected override void Start()

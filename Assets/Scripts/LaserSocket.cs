@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 
 public class LaserSocket : Signal
 {
-    [SerializeField]
-    float _bulletSignalTimeInSeconds = 5;
+    [SerializeField] float _bulletSignalTimeInSeconds = 5;
 
     private void OnTriggerEnter(Collider other)
     {

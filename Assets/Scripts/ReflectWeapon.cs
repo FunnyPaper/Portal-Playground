@@ -3,17 +3,14 @@
 [RequireComponent(typeof(Rigidbody))]
 public class ReflectWeapon : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _reflectPoint;
-    private Rigidbody _rb;
+    [SerializeField] Transform _reflectPoint = null;
+    Rigidbody _rb;
 
     public Transform ReflectPoint => _reflectPoint;
 
-    [SerializeField]
-    float _extendsBulletLifetime = 5;
-
-    public int ReflectPrecision = 2;
-    private float _multiplier = 10;
+    [SerializeField] float _extendsBulletLifetime = 5;
+    [SerializeField] int ReflectPrecision = 2;
+    float _multiplier = 10;
     
     void Awake()
     {

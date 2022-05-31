@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using GlobalUtility.Logic;
 using GlobalUtility.InheritBehaviour;
@@ -10,8 +8,8 @@ public class EjectorMechanism : Mechanism
     GameObject SpawnPoint;
     
     [Header("Spawn Data")]
-    public GameObject SpawnObject;
-    public int MaxSpawns = 1;
+    [SerializeField] GameObject SpawnObject = null;
+    [SerializeField] int MaxSpawns = 1;
 
     protected override void Start()
     {

@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using GlobalUtility.Logic;
 using GlobalUtility.InheritBehaviour;
 
 public class FlipActiveMechanism : Mechanism
 {
-    [SerializeField]
-    bool _isActiveOnStart = true;
+    [SerializeField] bool _isActiveOnStart = true;
 
     // Start is called before the first frame update
     protected override void Start()

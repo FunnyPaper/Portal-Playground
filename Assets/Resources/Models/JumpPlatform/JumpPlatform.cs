@@ -1,23 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class JumpPlatform : MonoBehaviour
 {
     Animator anim;
-    public GameObject jumpDirection;
+    [SerializeField] GameObject jumpDirection = null;
     public float jumpForce = 3.0f;
-    public AudioClip JumpAudioClip;
+    [SerializeField] AudioClip JumpAudioClip = null;
     AudioSource aSource;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         aSource = GetComponent<AudioSource>();
     }
-    void Update()
-    {
 
-    }
     private void OnTriggerEnter(Collider other)
     {     
         aSource.clip = JumpAudioClip;

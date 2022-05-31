@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 using GlobalUtility.Logic;
 
 public class RotateMechanism : Mechanism
 {
-    [SerializeField]
-    Vector3 _angle;
+    [SerializeField] Vector3 _angle = Vector3.zero;
 
     protected override void Start()
     {

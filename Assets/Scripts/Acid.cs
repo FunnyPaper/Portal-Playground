@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 
 [RequireComponent(typeof(AudioSource), typeof(BoxCollider))]
@@ -13,12 +11,6 @@ public class Acid : MonoBehaviour
         aSource = GetComponent<AudioSource>();
     }
 
-
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Entity entity;
@@ -27,7 +19,6 @@ public class Acid : MonoBehaviour
             entity.Destroy();
             aSource.Play();
         }
-        //other.BroadcastMessage("Destroy", null, SendMessageOptions.DontRequireReceiver);
     }
 
 }

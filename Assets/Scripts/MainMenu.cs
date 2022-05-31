@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject OptionsMenuGroup;
-    public GameObject MainMenuGroup;
+    [SerializeField] GameObject OptionsMenuGroup = null;
+    [SerializeField] GameObject MainMenuGroup = null;
     
     void Start()
     {
@@ -16,10 +14,6 @@ public class MainMenu : MonoBehaviour
         Cursor.visible = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
     public void ShowOptions()
     {
         MainMenuGroup.SetActive(false);
@@ -33,7 +27,6 @@ public class MainMenu : MonoBehaviour
     public void SetVolume(Slider slider)
     {
         AudioListener.volume = slider.value;
-        Globals.volume = slider.value;
     }
     public void Play()
     {

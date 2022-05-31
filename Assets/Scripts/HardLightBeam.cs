@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using GlobalUtility.Logic;
 using GlobalUtility.InheritBehaviour;
@@ -11,9 +9,9 @@ public class HardLightBeam : ContinousMechanism
 {
     Mesh mesh;
     BoxCollider bc;
-    public bool IsActiveIns { get; set; } = false;
+    float _lastDistance = 0;
 
-    private float _lastDistance = 0;
+    public bool IsActiveIns { get; set; } = false;
 
     private void Awake()
     {

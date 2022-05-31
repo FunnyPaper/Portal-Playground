@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 
 public class Gun : MonoBehaviour
 {
-    public float gunDistance = 23.0f;
-    public float gunForce = 20.0f;
-    public float gunDamage = 100.0f;
-    Camera PlayerCamera;
-    public GameObject Bullet;
+    [SerializeField] float gunDistance = 23.0f;
+    [SerializeField] float gunForce = 20.0f;
+    [SerializeField] float gunDamage = 100.0f;
+    [SerializeField] GameObject Bullet = null;
+    [SerializeField] AudioClip laser_shot = null;
 
-    public AudioClip laser_shot;
+    Camera PlayerCamera;
     AudioSource AudioSource;
 
     // Start is called before the first frame update
@@ -51,7 +49,7 @@ public class Gun : MonoBehaviour
             Rigidbody rb = hit.transform.gameObject.GetComponent<Rigidbody>();
             if (rb && !hit.transform.CompareTag("Redirection_Cube"))
             {
-                //rb.AddForce(PlayerCamera.transform.forward * gunForce, ForceMode.Impulse);
+                rb.AddForce(PlayerCamera.transform.forward * gunForce, ForceMode.Impulse);
             }
         }
     }

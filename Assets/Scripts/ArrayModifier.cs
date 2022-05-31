@@ -23,11 +23,6 @@ public class ArrayModifier : MonoBehaviour
         Vector3.zero
     };
 
-    void Update()
-    {
-        
-    }
-
     public void Extend(int value)
     {
         if (counts.Count >= 3)
@@ -64,18 +59,6 @@ public class ArrayModifier : MonoBehaviour
 
                 for (int k = 0; k < _initializes[i][j].Count; k++)
                     _initializes[i][j][k].transform.parent = this.transform;
-
-                //if(diffX < 0 && -diffX <= _initializes[i].Count - i)
-                //{
-                //    foreach (GameObject go in _initializes[i][j])
-                //        DestroyImmediate(go);
-                //}
-
-                //if((diffY < 0 && -diffY <= _initializes[i][j].Count - j))
-                //{
-                //    foreach (GameObject go in _initializes[i][j])
-                //        DestroyImmediate(go);
-                //}
 
                 if (diffZ < 0)
                 {

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Linq;
 using GlobalUtility.InheritBehaviour;
 using GlobalUtility.Logic;
@@ -8,8 +6,7 @@ using GlobalUtility.Logic;
 [RequireComponent(typeof(Exit))]
 public class ChangeNextLevelMechanism : Mechanism
 {
-    [SerializeField]
-    string NewDestination;
+    [SerializeField] string NewDestination = string.Empty;
 
     Exit ExitDoor;
 

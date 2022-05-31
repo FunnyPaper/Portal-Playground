@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using GlobalUtility.InheritBehaviour;
 
@@ -11,23 +10,23 @@ public class TurretAI : AIEntity
 
     [Header("Game Objects References")]
 
-    public GameObject Spine;
+    [SerializeField] GameObject Spine = null;
     [HideInInspector] public GameObject Player;
-    public GameObject Laser;
+    [SerializeField] GameObject Laser = null;
     Animator anim;
 
     [Header("Sounds")]
 
     AudioSource speak_aSource;
-    public List<AudioClip> turret_shoot_list = new List<AudioClip>();
-    public AudioClip activated;
-    public AudioClip deploying;
-    public AudioClip there_you_are;
-    public AudioClip i_see_you;
-    public AudioClip anyone_there;
-    public AudioClip searching;
-    public AudioClip sentry_mode_activated;
-    public AudioClip shutting_down;
+    [SerializeField] List<AudioClip> turret_shoot_list = new List<AudioClip>();
+    [SerializeField] AudioClip activated = null;
+    [SerializeField] AudioClip deploying = null;
+    [SerializeField] AudioClip there_you_are = null;
+    [SerializeField] AudioClip i_see_you = null;
+    [SerializeField] AudioClip anyone_there = null;
+    [SerializeField] AudioClip searching = null;
+    [SerializeField] AudioClip sentry_mode_activated = null;
+    [SerializeField] AudioClip shutting_down = null;
 
     protected override void Start()
     {
@@ -72,7 +71,7 @@ public class TurretAI : AIEntity
                 {
 
                     anim.SetBool("armed", true);
-                    Speak(activated, there_you_are, i_see_you, there_you_are);
+                    Speak(activated, there_you_are, i_see_you, deploying);
 
                 }
             }
@@ -91,7 +90,7 @@ public class TurretAI : AIEntity
 
     public void Speak(params AudioClip[] audio_clip_list)
     {
-        //wylosuj któryś z podanych próbek dźwiękowych
+        //wylosuj którąś z podanych próbek dźwiękowych
         int clipIndex = Random.Range(0, audio_clip_list.Length);
         AudioClip clip = audio_clip_list[clipIndex];
         speak_aSource.clip = clip;
